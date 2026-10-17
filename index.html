@@ -7,19 +7,9 @@
   <!-- Tailwind en une ligne (il faut internet) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="font-sans text-slate-900 bg-white">
+<body class="font-sans text-slate-900 bg-slate-100">
 
-  <!--
-    ATELIER LANDING ACME STUDIO
-    Règle du jeu : d'abord la bonne balise, ensuite les classes Tailwind.
-    Ouvre ce fichier dans Chrome à côté de VS Code. Ctrl+S puis F5 après chaque étape.
-
-    ÉTAPE 1 (10 min) : le haut de page
-    Emballe le logo et les liens dans les bonnes balises (header, nav avec aria-label, ul/li/a).
-    Tailwind : logo à gauche, liens à droite (flex justify-between items-center),
-    empilé sur mobile, en ligne à partir de md:.
-  -->
-  <header class="px-8 py-6">
+  <header class="border-b border-slate-200 px-8 py-6">
     <nav aria-label="Primary" class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
       <a href="./index.html" class="text-xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">
         Acme Studio
@@ -188,33 +178,34 @@
 
   </main>
 
-
-
-
-
+  <footer class="border-t border-slate-200 px-8 py-6">
+    <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+      <p class="text-sm text-slate-600">
+        © 2026 Acme Studio.
+      </p>
   
-  -->
-
-
-  <!--
-    ÉTAPE 5 (10 min) : section contact, id="contact"
-    Un h2, puis un form : nom, email, type de projet (select), message (textarea), bouton d'envoi.
-    Chaque champ a son label avec for = id. Le bon type sur l'email.
-  -->
-  Démarrer un projet
-  Nom
-  Email
-  Type de projet : Identité de marque, Site produit, Accompagnement
-  Votre message
-  Envoyer
-
-
-  <!--
-    ÉTAPE 6 (5 min) : pied de page
-  -->
-  © 2026 Acme Studio. Mentions légales. Confidentialité.
-
-
+      <nav aria-label="Informations légales">
+        <ul class="flex flex-col gap-4 text-sm md:flex-row">
+          <li>
+            <a
+              href="mentions-legales.html"
+              class="hover:text-violet-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+            >
+              Mentions légales
+            </a>
+          </li>
+          <li>
+            <a
+              href="confidentialite.html"
+              class="hover:text-violet-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+            >
+              Confidentialité
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
   <!--
     AUDIT FINAL (checklist)
     [ ] header, nav, main, footer présents, main une seule fois
