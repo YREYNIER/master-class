@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Studio</title>
+  <!-- Tailwind en une ligne (il faut internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-sans text-slate-900 bg-white">
+
+  <!--
+    ATELIER LANDING ACME STUDIO
+    Règle du jeu : d'abord la bonne balise, ensuite les classes Tailwind.
+    Ouvre ce fichier dans Chrome à côté de VS Code. Ctrl+S puis F5 après chaque étape.
+
+    ÉTAPE 1 (10 min) : le haut de page
+    Emballe le logo et les liens dans les bonnes balises (header, nav avec aria-label, ul/li/a).
+    Tailwind : logo à gauche, liens à droite (flex justify-between items-center),
+    empilé sur mobile, en ligne à partir de md:.
+  -->
+  <header class="px-8 py-6">
+    <nav aria-label="Primary" class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+      <a href="./index.html" class="text-xl font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">
+        Acme Studio
+      </a>
+      <ul class="flex flex-col items-center gap-4 md:flex-row">
+        <li>
+          <a href="#travaux" class="hover:text-violet-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">Travaux</a>
+        </li>
+        <li>
+          <a href="#equipe" class="hover:text-violet-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">Équipe</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-violet-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="py-16 px-8" aria-labelledby="hero-title">
+      <h1
+        id="hero-title"
+        class="text-4xl font-extrabold md:text-6xl"
+      >
+        Des sites qui donnent envie de cliquer.
+      </h1>
+  
+      <p class="mt-6 text-lg text-slate-600">
+        Identités et sites produit pour les jeunes marques.
+      </p>
+  
+      <a
+        href="#contact"
+        class="mt-8 inline-block rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white hover:bg-violet-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+      >
+        Démarrer un projet
+      </a>
+    </section>
+    <section id="travaux" aria-labelledby="travaux-title" class="px-8 py-16">
+      <h2 id="travaux-title" class="text-3xl font-bold">
+        Nos travaux
+      </h2>
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Identité de marque</h3>
+          <p class="mt-3 text-slate-600">
+            Logo, palette et typographies pour la marque Lumen.
+          </p>
+        </article>
+      
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Site produit</h3>
+          <p class="mt-3 text-slate-600">
+            Landing de lancement pour l'application Focus Orb.
+          </p>
+        </article>
+      
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Accompagnement</h3>
+          <p class="mt-3 text-slate-600">
+            Un studio à vos côtés chaque mois.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="equipe" aria-labelledby="equipe-title" class="px-8 py-16">
+      <h2 id="equipe-title" class="text-3xl font-bold">
+        L’équipe
+      </h2>
+    
+      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Camille Martin</h3>
+          <p class="mt-3 text-slate-600">
+            Directrice artistique — identité visuelle et design de marque.
+          </p>
+        </article>
+    
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Alex Dupont</h3>
+          <p class="mt-3 text-slate-600">
+            Développeur front-end — création de sites accessibles et responsives.
+          </p>
+        </article>
+    
+        <article class="rounded-lg border border-slate-200 p-6">
+          <h3 class="text-xl font-semibold">Sam Bernard</h3>
+          <p class="mt-3 text-slate-600">
+            Chef de projet — coordination et accompagnement des clients.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="contact" aria-labelledby="contact-title" class="px-8 py-16">
+      <h2 id="contact-title" class="text-3xl font-bold">
+        Démarrer un projet
+      </h2>
+    
+      <form method="post" class="mt-8 flex max-w-xl flex-col gap-6">
+        <div>
+          <label for="nom" class="mb-2 block font-medium">
+            Nom
+          </label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            autocomplete="name"
+            required
+            class="w-full rounded-lg border border-slate-300 p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+          />
+        </div>
+    
+        <div>
+          <label for="email" class="mb-2 block font-medium">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+            class="w-full rounded-lg border border-slate-300 p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+          />
+        </div>
+    
+        <div>
+          <label for="type-projet" class="mb-2 block font-medium">
+            Type de projet
+          </label>
+          <select
+            id="type-projet"
+            name="type-projet"
+            required
+            class="w-full rounded-lg border border-slate-300 bg-white p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+          >
+            <option value="">Choisissez un type de projet</option>
+            <option value="identite-marque">Identité de marque</option>
+            <option value="site-produit">Site produit</option>
+            <option value="accompagnement">Accompagnement</option>
+          </select>
+        </div>
+    
+        <div>
+          <label for="message" class="mb-2 block font-medium">
+            Votre message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            class="w-full rounded-lg border border-slate-300 p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+          ></textarea>
+        </div>
+    
+        <button
+          type="submit"
+          class="self-start rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white hover:bg-violet-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-600"
+        >
+          Envoyer
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+
+
+
+
+  
+  -->
+
+
+  <!--
+    ÉTAPE 5 (10 min) : section contact, id="contact"
+    Un h2, puis un form : nom, email, type de projet (select), message (textarea), bouton d'envoi.
+    Chaque champ a son label avec for = id. Le bon type sur l'email.
+  -->
+  Démarrer un projet
+  Nom
+  Email
+  Type de projet : Identité de marque, Site produit, Accompagnement
+  Votre message
+  Envoyer
+
+
+  <!--
+    ÉTAPE 6 (5 min) : pied de page
+  -->
+  © 2026 Acme Studio. Mentions légales. Confidentialité.
+
+
+  <!--
+    AUDIT FINAL (checklist)
+    [ ] header, nav, main, footer présents, main une seule fois
+    [ ] un seul h1, pas de niveau de titre sauté
+    [ ] chaque input a son label (for = id)
+    [ ] lien pour aller ailleurs, bouton pour agir
+    [ ] Tab : on atteint tout, avec un focus visible
+    [ ] fenêtre réduite : tout passe en une colonne
+    [ ] aucune classe Tailwind inventée
+    BONUS : flexboxfroggy.com si tu as fini avant tout le monde
+  -->
+</body>
+</html>
